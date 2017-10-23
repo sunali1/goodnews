@@ -1,6 +1,7 @@
-## #Good News
+## Good News
 
-Good News is a Rails application that filters articles provided by the Google News API to only show 'uplifting' results.
+Good News is a Javascript application that filters articles provided by the Google News API to only show 'uplifting' results.
+
 
 
 # MVP (Tuesday)
