@@ -10,8 +10,8 @@
         if (this.readyState == 4 && this.status == 200) {
           var data = httpRequest.responseText
           var parseddata = JSON.parse(data);
-          var contentArray = parseddata.articles
-          document.getElementById('articles').innerHTML = parseddata.articles
+          var contentArray = JSON.stringify(parseddata)
+          document.getElementById('articles').innerHTML = contentArray
         }
     };
     httpRequest.open("GET", url, true);
