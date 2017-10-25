@@ -2,13 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <script type="text/javascript" src = "./articles.js"> </script>
+    <script type="text/javascript" src = "./article-list-view.js"></script>
+    <script type="text/javascript" src = "./feed-controller.js"></script>
+    <title> Masaya News </title>
   </head>
   <body>
-    <p id = 'articles'></p>
+    <div id='app'></div>
 
-<script type="text/javascript" src = "./apiCall.js"> </script>
-<script type="text/javascript" src = "./article-list-model.js"> </script>
-
+    <script>
+    var controller = new FeedController();
+    controller.displayNews();
+    </script>
+    
   </body>
 </html>
