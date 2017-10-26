@@ -1,21 +1,25 @@
 (function(exports){
 
   function Articles() {
-    this.data = '';
   }
 
-  Articles.prototype.getData = function() {
-    var httprequest = new XMLHttpRequest();
-    var url = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=c013df4cb4354f4ea56e3a7e16373797";
+  Articles.prototype.getData = function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    var url = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=c013df4cb4354f4ea56e3a7e16373797";
     var self = this;
 
-    var callback = function() {
-      self.data = JSON.parse(this.response).articles;
-    }
+    xhr.addEventListener("load", function() {
+      var data = JSON.parse(this.response).articles;
+      console.log("3");
+      resolve(data);
+    });
+    xhr.open("GET", url);
+    xhr.send();
+  };
 
-    httprequest.addEventListener("load", callback);
-    httprequest.open("GET", url);
-    httprequest.send();
+  Articles.prototype.getDataV2 = function() {
+    console.log("2");
+    return new Promise(Articles.prototype.getData);
   };
 
   exports.Articles = Articles;
