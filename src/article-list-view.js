@@ -1,12 +1,11 @@
 (function(exports){
 
-  function ArticleListView( articles = new Articles() ){
+  function ArticleListView(articles) {
     this.articles = articles;
-    this.articles.getData();
   }
 
   ArticleListView.prototype.getHTML = function(){
-    var articleList = this.articles.data;
+    var articleList = this.articles;
     var toReturn = "<ul>";
 
     for (i=0; i < articleList.length; i++) {
