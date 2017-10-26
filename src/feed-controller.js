@@ -2,11 +2,14 @@
 
   function FeedController(){
     var articles = new Articles();
-    console.log("1");
     articles.getDataV2().then(function(data){
-      var view = new ArticleListView(data);
+      var filteredData = data.filter((item) => {
+        var headline = item.title;
+        var n = headline.includes("Trump");
+        if (n == false) {return headline};
+      });
+      var view = new ArticleListView(filteredData);
       var html = view.getHTML();
-      console.log("4");
       document.getElementById('app').innerHTML = html;
     });
   }
