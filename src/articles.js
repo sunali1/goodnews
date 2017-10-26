@@ -10,7 +10,6 @@
 
     xhr.addEventListener("load", function() {
       var data = JSON.parse(this.response).articles;
-      console.log("3");
       resolve(data);
     });
     xhr.open("GET", url);
@@ -18,7 +17,6 @@
   };
 
   Articles.prototype.getDataV2 = function() {
-    console.log("2");
     return new Promise(Articles.prototype.getData);
   };
 
