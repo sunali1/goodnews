@@ -5,7 +5,7 @@
 
     articles.getDataV2().then(function(unfilteredData){
 
-      var filter = new articleFilter(unfilteredData);
+      var filter = new ArticleFilter(unfilteredData);
       filter.filterByTitle();
       var filteredArticles = filter.filteredData;
       var view = new ArticleListView(filteredArticles);

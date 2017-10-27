@@ -1,14 +1,14 @@
 (function(exports){
 
-function articleFilter(unfilteredData){
+function ArticleFilter(unfilteredData){
   this.unfilteredData = unfilteredData;
   this.filteredData = [];
 }
 
-articleFilter.prototype.filterByTitle = function() {
+ArticleFilter.prototype.filterByTitle = function() {
   this.unfilteredData.filter((article) => {
     var articleTitle = article.title;
-    var words = ["Trump", "Harassment", "Murder", "Brexit", "Racist", "Misogynist", "Assault", "Weinstein", "Attack", "ISIS", "Terrorism", "Terrorist", "Conspiracy", "Fallout", "Sad", "Bad"];
+    var words = ["Trump", "Harassment", "Groped", "Murder", "Brexit", "Racist", "Misogynist", "Assault", "Weinstein", "Attack", "Attacks", "ISIS", "Terrorism", "Terrorist", "Conspiracy", "Fallout", "Sad", "Bad"];
     if ((matcher(articleTitle, words)).length === 0)
       this.filteredData.push(article);
   });
@@ -23,5 +23,5 @@ function matcher(subject, words) {
    return subject.match(regex) || [];
 }
 
-  exports.articleFilter = articleFilter;
+  exports.ArticleFilter = ArticleFilter;
 })(this);
