@@ -4,13 +4,18 @@
     this.articles = articles;
   }
 
-  ArticleListView.prototype.getHTML = function(){
+  ArticleListView.prototype.getTitleHTML = function(){
     var articleList = this.articles;
     var toReturn = "<ul>";
 
     for (i=0; i < articleList.length; i++) {
       var currentArticleTitle = articleList[i].title;
-      toReturn = toReturn + "<li>" + currentArticleTitle + "</li>";
+      var currentArticleLink = articleList[i].url;
+      var currentArticleImage = articleList[i].urlToImage;
+      toReturn = toReturn + "<li>"
+                          + "<img src=" + currentArticleImage +">"
+                          + "<a href =" + currentArticleLink +">"
+                          + currentArticleTitle + "</a></li>";
     }
 
     toReturn = toReturn + "</ul>";
