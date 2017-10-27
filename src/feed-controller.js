@@ -6,7 +6,7 @@
     articles.getDataV2().then(function(data){
       var filteredData = data.filter((item) => {
         var subject = item.title;
-        var words = ["Trump", "Harassment", "Murder", "Brexit", "Racist", "Misogynist", "Assault", "Weinstein", "Attack", "ISIS", "Terrorism", "Terrorist", "Conspiracy", "Fallout", "Sad", "Bad"];
+        var words = ["Trump", "Harassment", "Groped", "Murder", "Brexit", "Racist", "Misogynist", "Assault", "Weinstein", "Attack", "Attacks", "ISIS", "Terrorism", "Terrorist", "Conspiracy", "Fallout", "Sad", "Bad"];
         // console.log(matchWords.matcher(subject, words));
         // console.log((matchWords.matcher(subject, words)).length === 0);
         if ((matchWords.matcher(subject, words)).length === 0) {return subject};
