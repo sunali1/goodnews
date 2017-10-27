@@ -2,6 +2,7 @@
 
   function FeedController(){
     var articles = new Articles();
+
     articles.getDataV2().then(function(unfilteredData){
 
       var filter = new articleFilter(unfilteredData);
@@ -9,6 +10,7 @@
       var filteredArticles = filter.filteredData;
       var view = new ArticleListView(filteredArticles);
       var html = view.getTitleHTML();
+
       document.getElementById('app').innerHTML = html;
     });
   }
