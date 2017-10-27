@@ -1,11 +1,11 @@
 
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
 // $brand-primary: #52d3aa !default;
-// $brand-secondary: #3f95ea !default; 
+// $brand-secondary: #3f95ea !default;
 
 $brand-primary: 			#f7c873 !default;
 $brand-secondary: 		#41454f !default;
@@ -52,16 +52,16 @@ $font-secondary: 'Roboto', arial, sans-serif;;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -76,7 +76,7 @@ $font-secondary: 'Roboto', arial, sans-serif;;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -88,10 +88,10 @@ $font-secondary: 'Roboto', arial, sans-serif;;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -108,7 +108,7 @@ body {
 	color: #222;
 	background: $brand-white;
 	&.fh5co-overflow {
-		overflow-x: auto;	
+		overflow-x: auto;
 	}
 }
 
@@ -312,7 +312,7 @@ p {
 		}
 	}
 	.fh5co-social {
-		
+
 		position: absolute!important;
 		right: 3em!important;
 		top: 3.2em;
@@ -341,7 +341,7 @@ p {
 		padding-right: 15px;
 	}
 	#fh5co-logo {
-		
+
 		text-align: center;
 		a {
 			color: $brand-black;
@@ -374,7 +374,7 @@ p {
 		vertical-align: base;
 		width: 100px;
 		i {
-			
+
 			top: 7px;
 			position: relative;
 			font-size: 30px;
@@ -395,9 +395,9 @@ p {
 	}
 }
 .fh5co-post-next {
-	right: 0;	
+	right: 0;
 	margin-right: -25px;
-	
+
 	&:hover {
 		margin-right: 10px;
 		color: $brand-black;
@@ -507,7 +507,7 @@ p {
 					}
 				}
 
-			} 
+			}
 		}
 
 		.fh5co-highlight {
@@ -606,7 +606,7 @@ figure {
 				vertical-align: top;
 			}
 		}
-		
+
 	}
 	.fh5co-box {
 		float: left;
@@ -677,7 +677,7 @@ figure {
 .to-animate-2,
 .animate-box {
 	.js & {
-		opacity: 0;	
+		opacity: 0;
 	}
 }
 
@@ -800,4 +800,3 @@ figure {
 		float: none;
 	}
 }
-
